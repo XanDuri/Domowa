@@ -1,0 +1,38 @@
+\documentclass[a4paper, 12pt]{amsart}
+
+%\usepackage{amsmath}
+%\usepackage[T1]{fontenc}]
+
+\author{Łukasz Moszczyński}
+\title{Wprowadzanie w tryb matematyczny}
+
+\begin{document}
+\maketitle
+\section{Symbole matematyczne}
+\subsection{Sumy, iloczyny i całki.}
+\(\Sigma^{n}_{k=1},\Pi^{n}_{k=1},\int_{0}^{\frac{\pi}{2}}\)\newline
+Dla każdego \( n\, \epsilon\,  \mathbb{N}\) spełniona jest równość
+\[\Sigma^{n}_{k=2}k^2=\frac{n(n+1)(2n+1)}{6}\]
+Także \( \forall n\, \epsilon\, \mathbb{N}\) spelnia sie
+\[\Pi^{n+1}_{k=2} \left ( 1-\frac{1}{k^2} \right )=\frac{n+1}{2n}\]
+\hspace{1.cm} Wewnatrz akapitu suma może być napisana jako \(\Sigma^{n}_{k=1}a_{n}\) albo jako  \(\Sigma^{n}_{k=1}a_{n}\), iloczyn jako \(\Pi^{n}_{k=1}a_{n}\) albo \(\Pi^{n}_{k=1}a_{n}\)
+\subsection{Funkcja Eulera}.
+ 
+ \begin{equation} \label{eq:euler}
+ \Gamma (z)=\int^{+\infty}_{0} t^{z-1}e^{-t}dt
+ \end{equation}
+ 
+ Drugim sposobem okreslenia funkcji \(\Gamma\) (dla dowolnych liczb zespolonych) jest:
+ 
+   \begin{equation} \label{eq:eulerdwa}
+ \Gamma (z)=\lim \limits_{x \to +\infty} \frac{n!n^z}{z(z+1)(z+2) \dots (z+n)}= \frac{1}{z} \Pi_{n=1}^{\infty}\frac{(1+\frac{1}{n})^z}{1+\frac{z}{n}}
+ \end{equation}
+ 
+ Mozemy takze okreslic odwrotnosc funkcji Gamma nastepuj¡co (\(\gamma\) to stala Eulera-Mascheroniego):
+ 
+  \begin{equation} \label{eq:eulertrzy}
+\frac{1}{ \Gamma (z)}=ze^{\gamma z} \Pi_{n=1}^{\infty} [(1+\frac{z}{n})e^{-\frac{z}{n}}]
+ \end{equation}
+ 
+ Wzór \eqref{eq:euler} jest definicj¡a \bf{Funkcji Eulera.}
+\end{document}
