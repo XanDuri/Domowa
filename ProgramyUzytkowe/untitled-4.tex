@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{algpseudocode}
+\begin{document}
+\noindent
+\rule{10cm}{0.1mm}\\
+\textbf{Algorithm 1} Moj algorythm\\
+\rule{10cm}{0.1mm}\\
+\textbf{Require:} $n\geq 0$\\
+\textbf{Ensure:} $a = x^n$
+\begin{algorithmic}
+\State $k \gets n;\; a\gets 1;\; b\gets x$
+\While{$k > 0$}$[Niezmennik: x^n=a\cdot b^k]$
+\If{$k\; jest\; liczba\; parzysta$} 
+    \State $k \gets k/2$
+    \State $b \gets b\cdot b$
+  \Else[k\; jest\; licba\; nierparzysta]
+    \State $k \gets k-1$
+    \State $a \gets a\cdot b$
+   \EndIf 
+\EndWhile
+
+\end{algorithmic}
+\rule{10cm}{0.1mm}\\
+\end{document}
