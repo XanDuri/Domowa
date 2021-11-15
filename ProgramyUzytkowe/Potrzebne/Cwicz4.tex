@@ -1,0 +1,184 @@
+   \documentclass[a4paper, 12pt]{amsart}   
+
+%\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage[polish]{babel}
+\usepackage{enumitem}
+\usepackage{listings}
+
+
+
+
+
+
+
+\newtheorem{theorem}{Twierdzenie}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definicja}
+
+
+     
+\author[A. Muranova]{Anna Muranova}
+\title{Ćwiczenie 4}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Wzór na kilka wierszy}
+\begin{equation}
+|\psi_{1,2}|^{2}=\left\vert 1+\dfrac{LC \lambda^2 }{2}\pm i\sqrt{-LC \lambda^2 -\left( \dfrac{
+LC \lambda^2 }{2}\right) ^{2}}\right\vert ^{2}
+\end{equation}
+\begin{equation}
+=\left( 1+\dfrac{LC \lambda^2 }{2}\right)
+^{2}-LC \lambda^2 -\left( \dfrac{LC \lambda^2 }{2}\right) ^{2}=1.
+\end{equation}
+
+\begin{multline}
+|\psi_{1,2}|^{2}=\left\vert 1+\dfrac{LC \lambda^2 }{2}\pm i\sqrt{-LC \lambda^2 -\left( \dfrac{
+LC \lambda^2 }{2}\right) ^{2}}\right\vert ^{2}\\
+=\left( 1+\dfrac{LC \lambda^2 }{2}\right)
+^{2}-LC \lambda^2 -\left( \dfrac{LC \lambda^2 }{2}\right) ^{2}=1.
+\end{multline} 
+
+%\begin{dmath}
+%|\psi_{1,2}|^{2}=\left\vert 1+\dfrac{LC \lambda^2 }{2}\pm i\sqrt{-LC \lambda^2 -\left( \dfrac{
+%LC \lambda^2 }{2}\right) ^{2}}\right\vert ^{2}\\
+%=\left( 1+\dfrac{LC \lambda^2 }{2}\right)
+%^{2}-LC \lambda^2 -\left( \dfrac{LC \lambda^2 }{2}\right) ^{2}=1.
+%\end{dmath}
+
+
+\begin{align}
+|\psi_{1,2}|^{2}=&\left\vert 1+\dfrac{LC \lambda^2 }{2}\pm i\sqrt{-LC \lambda^2 -\left( \dfrac{
+LC \lambda^2 }{2}\right) ^{2}}\right\vert ^{2}\label{1}\\
+=&\left( 1+\dfrac{LC \lambda^2 }{2}\right)
+^{2}-LC \lambda^2 -\left( \dfrac{LC \lambda^2 }{2}\right) ^{2}=1.\label{2}
+\end{align}
+
+\begin{equation}
+\begin{split}
+|\psi_{1,2}|^{2}=&\left\vert 1+\dfrac{LC \lambda^2 }{2}\pm i\sqrt{-LC \lambda^2 -\left( \dfrac{
+LC \lambda^2 }{2}\right) ^{2}}\right\vert ^{2}\\
+=&\left( 1+\dfrac{LC \lambda^2 }{2}\right)
+^{2}-LC \lambda^2 -\left( \dfrac{LC \lambda^2 }{2}\right) ^{2}=1.
+\end{split}
+\end{equation}
+\eqref{1}, \eqref{2}
+
+\section{Układy równań, macierzy oraz tabele}
+
+\begin{equation}
+f(x)=
+\begin{cases}
+\frac{x+5}{12}\mbox{ dla }x>0, \\
+x^2+x-5 \mbox{ dla }x\le 0.\\ 
+\end{cases}
+ \end{equation}
+
+\begin{equation}
+f(x)=
+\left\{\begin{split}
+&\frac{x+5}{12}\mbox{ dla }x>0, \\
+&x^2+x-5 \mbox{ dla }x\le 0.\\ 
+\end{split}\right.
+ \end{equation}
+
+
+\begin{equation}
+\mathbf{A} =
+\left( \begin{array}{ccc}
+12 & 3 & -10\\
+x & 15 & 0 \\
+2.5 & -23& 12
+\end{array} \right)
+\end{equation}
+
+
+\begin{center}
+\begin{tabular}{ c c c }
+ cell1 & cell2 & cell3 \\ 
+ cell4 & cell5 & cell6 \\  
+ cell7 & cell8 & cell9    
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c| c|| l| l||r|} 
+ \hline
+Numer & Album &\multicolumn{2}{c||}{Imie i Nazwisko}&ocena\\ 
+ \hline\hline
+ 1 & 11111 & Jan & Kowalski &5\\ 
+ \hline
+ 2 &22222  & Grzegorz & Brzęczyszczykiewicz &4.5\\
+ \hline
+ 3 & 12345& Piotr & Wiśniewski&2 \\
+ \hline
+ 4 & 12346& Wojciech & Kowalczyk&2.5 \\
+ \hline
+ 5 & 12347 &  Krystyna & Lewandowska&3 \\
+ \hline
+\end{tabular}
+\end{center}
+
+\section{Pakiet \texttt{listings} dla wpisywania kodów}
+\lstset{language=Pascal}
+\begin{lstlisting}
+function power(x: integer,n: integer): integer;
+Var k,a,b:integer;
+Begin
+	k:=n; a:=1; b:=x;
+	while k>0 do begin {Niezmiennik: x^n=a*b^k}
+		if k mod 2=0 then begin
+			k:=k/2;
+			b:=b*b;
+		end else begin
+			k:=k-1;
+			a:=a*b;
+		end;
+	end;
+	power:=a;
+End;
+\end{lstlisting}
+
+\section{Pakiety \texttt{url} oraz \texttt{hyperref}}
+\url{https://ru.overleaf.com/learn/latex/Hyperlinks}\\
+\url{https://ru.overleaf.com/learn/latex/Bibliography_management_with_bibtex}\\
+
+\section{Spis literatury}
+Niech potrzebujemy książki  \cite{Muranova1}, \cite{Woess}, \cite{Soardi}.
+
+\bibliographystyle{plain}
+%\bibliography{myliteratur}
+
+\begin{thebibliography}{10}
+\bibitem{Muranova1}
+Anna Muranova.
+\newblock On the notion of effective impedance.
+\newblock {\em arXiv:1905.02047}, \url{http://arxiv.org/abs/arXiv:1905.02047},
+  2019.
+
+\bibitem{Soardi}
+Paolo~M. Soardi.
+\newblock {\em Potential Theory on Infinite Networks}.
+\newblock Springer-Verlag, Berlin Heidelberg, 1994.
+
+\bibitem{Woess}
+Wolfgang Woess.
+\newblock {\em Random Walks on Infinite Graphs and Groups}.
+\newblock Number 138 in Cambridge Tracts in Mathematics. Cambridge University
+  Press, 2000.
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
