@@ -1,0 +1,75 @@
+\documentclass[xcolor=dvipsnames, 9pt]{beamer}
+
+
+\usepackage[T1]{fontenc}
+\usepackage{amssymb, amsthm, amsmath, amsfonts}
+\usepackage[polish]{babel}
+\usepackage{listings}
+\usepackage{hyperref}
+%\usepackage{mathtools}
+\usepackage{color}
+%\usepackage{relsize}
+\usepackage{graphicx}
+
+\usepackage{wrapfig}
+\usepackage{tikz}
+
+% Styl, prz. Pittsburgh
+\usetheme{Warsaw}
+%\usecolortheme[named=Aquamarine]{structure}
+
+\newtheorem*{remark}{Remark}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{proposition}[theorem]{Proposition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setbeamertemplate{section in toc}[ball unnumbered]
+%\setbeamertemplate{subsection in toc}[ball unnumbered]
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\AtBeginSection[]
+{
+	\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents[currentsection]
+    \end{frame}
+}
+
+\setbeamercovered{highly dynamic}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\resetcounteronoverlays{saveenumi}
+
+
+\sloppy
+
+\title[Krotka nazwa]{Dluga nazwa}   
+\author{Imie Nazwisko}
+
+\date{\today}
+
+\begin{document}
+
+
+
+\begin{frame}
+\titlepage
+
+
+\end{frame} 
+
+\begin{frame}{Nazwa slajdu}
+
+Pierwszy slajd.
+
+\end{frame}
+
+
+\end{document}
+
+
