@@ -1,0 +1,132 @@
+\documentclass[a4paper, 12pt]{amsart}   
+
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+
+
+       
+\author[A. Muranova]{Anna Muranova}
+\title{Wprowadzanie w tryb matematyczny}
+
+\begin{document}
+
+
+\maketitle
+
+
+\section{Środowisko trybu matematycznego}
+\subsection{Przykłady}
+
+\(x\), $y$, \begin{math} z\end{math}
+
+$$x$$
+
+\[y\]
+
+\begin{displaymath} z\end{displaymath}
+
+\begin{equation} w \end{equation}
+
+\begin{equation*} v \end{equation*}
+
+
+
+\subsection{Zadanie}
+Ułomek wewnątrz akapitu $\frac{\frac{1}{x+y}-1}{a+b+c}$ i w trybie eksponowanym
+\begin{displaymath}
+\frac{\frac{1}{x+y}-1}{a+b+c}.
+\end{displaymath}
+Inna możliwość  wewnątrz akapitu: $\dfrac{\frac{1}{x+y}-1}{a+b+c}$ czy $\displaystyle \frac{\frac{1}{x+y}-1}{a+b+c}$ .
+
+
+
+
+\section{Symbole matematyczny}
+\subsection{Zadania na wyszukiwanie}
+\subsubsection{Pierwiastki}
+$\sqrt{x}$, $\sqrt{x}+3$, $\sqrt{x+3}$, $\sqrt[3]{\sqrt{x}}+7$, $\sqrt[3]{\sqrt{x}+7}$ albo
+\begin{equation*} 
+\sqrt[3]{\sqrt{x}+7}.
+\end{equation*} 
+
+
+\subsubsection{Litery grecki}
+$\alpha, \beta, \Gamma, \gamma \Delta, \delta, \varepsilon, \epsilon, \Phi, \phi, \varphi, \theta, \vartheta, \dots$
+
+\begin{equation*}
+B(x,y)=\frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}.
+\end{equation*}
+
+\subsubsection{Indeksy górny i dolny}
+$a_5$, $x^{3+y}$, $A^{i,j,k}_{n+1}$, $e^{i\pi}=-1$,
+$$
+a_{1} x^{2} e^{-\alpha t}
+a^{3}_{ij} e^{x^2} = \left({e^x}\right)^2
+$$
+\subsubsection{Symbole relacji}
+$<,\leq, >, \geq, \neq, \subset, \subseteq, \supset, \in, \supseteq, \parallel, \not\parallel , \not\in, \not\subset, \not =, \not >, \nparallel$
+\begin{equation*}
+A=\{1,x\}\subseteq B=\{1,7,x, (b_i)_{i\in I}\}\neq C=\{1,7,\{x\}, (b_i)_{i\in I}\}.
+\end{equation*}
+
+\subsubsection{Zbióry liczbowy}
+$\mathbb N, \mathbb Z$, $\mathbb Q, \mathbb C$.
+
+\begin{equation*}
+\mathbb N\subset \mathbb Z\subset\mathbb Q\subset \mathbb C.
+\end{equation*}
+
+\subsubsection {Funkcji}
+$\cos x, \sin x, \lg x$.
+$$
+\cos(2 \theta) = \cos^2(\theta)-\sin^2(\theta)
+$$
+
+\subsubsection{Logika i teoria mnogości}
+$\exists, \not\exists, \forall, \neg, \land, \lor$\\
+Stałą liczbę $a$ nazywamy granicą ciągu, jeśli
+$\forall\varepsilon>0\; \exists N$ \.ze $\forall n>N$ spełniony jest warunek $|a_n-a|<\varepsilon$.
+
+
+\subsubsection{Sumy, iloczyny i całki}
+$\sum\limits^{n}_{k=1}, \prod_{k=1}^{n}$, $\int_{0}^{\frac{\pi}{2}}$.
+
+$$
+A_n=\sum_{k=1}^n a_k
+$$
+
+$$
+\exp(\int_s^t a(u)du)s^{-1}g_s(v,v)
+$$
+
+Dla każdego $n\in\mathbb N$ spełniona jest równość 
+    \begin{equation*}
+      \sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6}.
+ \end{equation*}
+Także $\forall n\in\mathbb N$ spełnia się
+    \begin{equation*}
+      \prod_{k=2}^{n+1}\left(1-\frac{1}{k^2}\right) = \frac{n+1}{2n}.
+ \end{equation*}
+
+Wewnątrz akapitu suma może być napisana jako $\sum_{k=1}^{n}a_n$ albo jako $\sum\limits_{k=1}^{n}a_n$, iloczyn jako $\prod_{k=1}^{n}a_n$ albo $\prod\limits_{k=1}^{n}a_n$.
+
+
+\subsection{Zadanie. Funkcja Eulera.} 
+    \begin{equation}\label{FunkcjaEulera}
+\Gamma(z) = \int\limits_0^{+\infty} t^{z-1}e^{-t}dt
+ \end{equation}
+Drugim sposobem określenia funkcji $\Gamma$ (dla dowolnych liczb zespolonych) jest:
+    \begin{equation}
+\Gamma(z) = \lim_{n\rightarrow +\infty} \frac{n!n^z}{z(z+1)(z+2) \ldots (z+n)} = \frac{1}{z} \prod_{n=1}^\infty \frac{\left(1+\frac{1}{n}\right)^z}{1+\frac{z}{n}}.
+ \end{equation}
+Możemy także określić odwrotność funkcji Gamma następująco ($\gamma$ to stała Eulera-Mascheroniego):
+    \begin{equation}
+\frac{1}{\Gamma (z)}=ze^{\gamma z}\prod_{n=1}^\infty \left[\left(1+\frac{z}{n}\right)e^{-\frac{z}{n}}\right].
+ \end{equation}
+
+Wzór \eqref{FunkcjaEulera} jest definicj\k{a} \textbf{Funkcji Eulera}.
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
